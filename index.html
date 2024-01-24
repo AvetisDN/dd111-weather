@@ -4,9 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./icon-font/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <img id="image-bg" src="./images/types/foggy.jpg" alt="" />
+      <div class="content">
+        <h1 id="location" class="location">MAKEEVKA</h1>
+        <h3 id="date" class="date">Monday, January 22, 2024</h3>
+        <div id="temperature-big" class="temperature-big">−5 &deg;C</div>
+        <div class="divider"></div>
+        <div class="weather-type">
+          <img id="weather-icon" src="./images/icons/types/foggy.svg" alt="" />
+          <div id="weather-type">Foggy</div>
+        </div>
+        <div class="footer">
+          <div>
+            <i class="icon-temperature"></i>
+            <span id="temperature">−5 &deg;C</span>
+          </div>
+          <div>
+            <i class="icon-humidity"></i>
+            <span id="humidity">74%</span>
+          </div>
+          <div>
+            <i id="wind-degree" class="icon-caret"></i>
+            <span id="wind-speed">8.6kph</span>
+          </div>
+        </div>
+      </div>
+      <button class="overlay-btn" id="overlay-btn">
+        <i class="icon-caret"></i>
+      </button>
+      <div class="overlay-locations" id="overlay-locations">
+        <button data-city="Makeevka">Makeevka</button>
+        <button data-city="Donetsk ua">Donetsk</button>
+        <button data-city="Moscow">Moscow</button>
+        <button data-city="Warsaw">Warsaw</button>
+        <button data-city="London">London</button>
+        <button data-city="Tokyo">Tokyo</button>
+      </div>
+      <div class="preloader" id="preloader">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <script src="./moment-with-locales.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
